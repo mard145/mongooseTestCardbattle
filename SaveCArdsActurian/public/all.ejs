@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Aliens</title>
+</head>
+<body>
+
+    <a href="addCard"> <li>Add new card</li> </a>
+    <a href="/"> <li>Início</li> </a>
+    <a href="edit"> <li>Edit</li> </a>
+
+    <h1>Todas as Cartas</h1>
+    
+<%for(let i = 0; i < aliens.length; i++){%>
+<div>
+    <div id="<%=aliens[i]._id%>"></div>
+
+<form method="POST" action="/<%=aliens[i]._id%>?_method=DELETE">
+
+    <h2><%=aliens[i].nameCard%></h2>
+    <div><%=aliens[i].breedCard%></div>
+    <div><%=aliens[i].levelCard%></div>
+    <div><%=aliens[i].EffectOrDescription%></div>
+    <div><%=aliens[i].attackPower%></div>
+    <div><%=aliens[i].DefensePower%></div>
+    <button type="submit">Delete</button>
+    <a href="/edit/<%=aliens[i]._id%>">Edit</a>
+
+</form>
+</div>
+<%}%>
+
+
+
+
+</body>
+</html>

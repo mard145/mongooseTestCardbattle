@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+<body>
+        <a href="addCard"> <li>Add new card</li> </a>
+        <a href="all"> <li>All Cards</li> </a>
+        <a href="/"> <li>Início</li> </a>
+        
+        <h1>Edit de cards</h1>
+
+    <form action="/edit/<%=body.id%>" method="POST">
+
+        <input type="text" name="nameCard" id="nameCard" placeholder="Name Alien" required value="<%=body.nameCard%>">
+        <input type="text" name="breedCard" id="breedCard" placeholder="Raça do Alien" required value="<%=body.breedCard%>">
+        <input type="number" name="levelCard" id="levelCard" placeholder="Level da Carta" required value="<%=body.levelCard%>">
+        <input type="text" name="EffectOrDescription" id="EffectOrDescription" placeholder="Descrição ou Efeito" required value="<%=body.EffectOrDescription%>">
+        <input type="number" name="attackPower" id="AttackPower" placeholder="Poder de Ataque" required value="<%=body.attackPower%>">
+        <input type="number" name="DefensePower" id="DefensePower" placeholder="Poder de Defesa" required value="<%=body.DefensePower%>">
+
+        <button id="but" type="submit">Edit</button>
+
+
+    </form>
+
+     
+           <h3> <%=error.message%> </h3>
+       
+    
+</body>
+</html>
